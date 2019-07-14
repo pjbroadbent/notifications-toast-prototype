@@ -1,0 +1,35 @@
+{
+  "name": "notifications-toast-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "svc-tools build --mode production",
+    "build:dev": "svc-tools build --mode development",
+    "channels": "svc-tools channels",
+    "check": "svc-tools check",
+    "clean": "rimraf gen dist",
+    "docs": "npm run docs:api && npm run docs:config",
+    "docs:api": "svc-tools docs",
+    "docs:config": "bootprint json-schema ./res/provider/config/layouts-config.schema.json ./dist/docs/config",
+    "fix": "svc-tools fix",
+    "generate": "node scripts/generateCode.js",
+    "posttest": "npm run check",
+    "prepack": "npm run clean && npm run build && tsc -p src/client/tsconfig.types.json",
+    "prepare": "npm run generate",
+    "test": "npm run test:unit && npm run test:int",
+    "test:int": "node test/runner.js",
+    "test:unit": "jest --colors --no-cache --config=jest-unit.config.js",
+    "zip": "svc-tools zip",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/openfin": "^43.0.1",
+    "hadouken-js-adapter": "^0.42.2",
+    "openfin-service-tooling": "^1.0.11",
+    "typescript": "^3.5.3",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

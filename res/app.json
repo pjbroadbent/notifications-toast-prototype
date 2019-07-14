@@ -1,0 +1,16 @@
+{
+    "licenseKey": "64605fac-add3-48a0-8710-64b38e96a2dd",
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "Noticiations Toast Prototype",
+        "description": "Noticiations Toast Prototype",
+        "url": "http://localhost:8080/index.html",
+        "uuid": "notifications-toast-prototype",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "stable"
+    },
+    "shortcut": {}
+}
